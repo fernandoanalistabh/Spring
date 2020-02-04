@@ -48,7 +48,7 @@ public class StudentController {
 		if (student != null) {
 			int result = service.createStudent(student);
 			if (result == 1)
-				return new ResponseEntity<>(Constants.ESTUDANTE_CRIADO, HttpStatus.OK);
+				return new ResponseEntity<>(Constants.ESTUDANTE_CRIADO, HttpStatus.CREATED);
 			return new ResponseEntity<>(Constants.ESTUDANTE_NAO_CRIADO, HttpStatus.BAD_REQUEST);
 		}
 		return new ResponseEntity<>(Constants.ERRO_ENVIO, HttpStatus.BAD_REQUEST);
